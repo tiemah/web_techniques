@@ -23,9 +23,6 @@
         <label for="password">Password:</label>
         <input type="password" name="password" min="4" max="12" required><br><br>
 
-        <label for="password">Confirm Password:</label>
-        <input type="password" name="password" min="4" max="12" required><br><br>
-
         <label for="date">Date of Birth:</label>
         <input type="date" name="date" required><br><br>
 
@@ -54,7 +51,7 @@
         <input type="range" name="range"  min="1" max="125" required><br><br>
 
         <label for="url">URL</label>
-        <input type="url" name="url" required><br><br>
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required />
 
         <label for="search">Search:</label>
         <input type="search" name="search"  minlength="4" maxlength="50" required><br><br>
