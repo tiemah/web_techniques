@@ -4,20 +4,22 @@
     <title>DOM Depth-First Traversal</title>
 </head>
 <body>
+    
     <h1>DOM Depth-First Traversal</h1>
+    
 
     <pre id="output"></pre>
 
     <script>
         function listDOM(node, depth, outputElement) {
-            const indent = "  ".repeat(depth);
+            const indent = "=".repeat(depth);
             const output = outputElement || document.getElementById("output");
 
             // Print the node's details to the output element
-            output.textContent += `${indent}Node Type: ${node.nodeType}, Node Name: ${node.nodeName}\n`;
+            output.textContent += `${indent}Node Type: ${node.tagType}, Node Name: ${node.tagName}\n`;
 
             if (node.nodeType === Node.ELEMENT_NODE) {
-                for (const childNode of node.childNodes) {
+                for (const childNode of node.childNodes) { 
                     listDOM(childNode, depth + 1, outputElement);
                 }
             }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Level-Order Traversal</title>
+</head>
+<body>
+    <h1>DOM Level-Order Traversal</h1>
+
+    <pre id="output"></pre>
+
+    <script>
+        function levelOrderTraversal(root, outputElement) {
+            const queue = [root];
+            const output = outputElement || document.getElementById("output");
+
+            while (queue.length > 0) {
+                const node = queue.shift();
+
+                // Print the node's information to the output element
+                output.textContent += `Node Type: ${node.nodeType}, Node Name: ${node.nodeName}\n`;
+
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    for (const childNode of node.childNodes) {
+                        queue.push(childNode);
+                    }
+                }
+            }
+        }
+
+        // Start the traversal from the root of the DOM <html>
+        levelOrderTraversal(document.documentElement);
+    </script>
+</body>
+</html>

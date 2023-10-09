@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> My Custom Event</title>
+  
+</head>
+<body>
+  <button id="myButton">Click me</button>
+  <script>
+    const customEvent = new CustomEvent('customEvent', { <!--Instansiatiation OR creating an Event from the Event Interface-->
+      detail: {
+        message: 'HELLO, CUSTOM EVENT!'
+      }
+    });
+
+    // Add an event listener to the document
+    document.addEventListener('customEvent', function(event) {
+      console.log('Custom Event Received:', event.detail.message);
+    });
+
+    // Add a click event listener to the button to dispatch the custom event
+    document.getElementById('myButton').addEventListener('click', function() {
+      document.dispatchEvent(customEvent);
+    });
+  </script>
+</body>
+</html>
