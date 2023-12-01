@@ -61,4 +61,45 @@ class AsyncFactorialAPI {
   
   // Run the test
   testAsyncFactorialAPI();
+
   
+//   Making use of my asynchrnous API
+
+
+// Step 1: Create an instance of the AsyncFactorialAPI
+const asyncFactorialApi = new AsyncFactorialAPI();
+
+// Step 2: Attach event listeners
+// Event listener for successful computation
+asyncFactorialApi.computeFactorial(5, (error, result) => {
+  if (error) {
+    console.error('Error:', error.message);
+  } else {
+    console.log('Factorial of 5:', result);
+  }
+});
+
+// Event listener for negative input
+asyncFactorialApi.computeFactorial(-3, (error, result) => {
+  if (error) {
+    console.error('Error:', error.message);
+  }
+});
+
+// Event listener for input exceeding the upper limit
+asyncFactorialApi.computeFactorial(12, (error, result) => {
+  if (error) {
+    console.error('Error:', error.message);
+  }
+});
+
+// Event listener for successful computation
+asyncFactorialApi.computeFactorial(7, (error, result) => {
+  if (error) {
+    console.error('Error:', error.message);
+  } else {
+    console.log('Factorial of 7:', result);
+  }
+});
+
+// Note: The results and errors will be logged after a 3-second delay due to the setTimeout in the API
