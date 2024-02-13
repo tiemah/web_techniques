@@ -63,7 +63,7 @@ class AsyncFactorialAPI {
   testAsyncFactorialAPI();
 
   
-//   Making use of my asynchrnous API
+//   Making use of my asynchronous API
 
 
 // Step 1: Create an instance of the AsyncFactorialAPI
@@ -93,13 +93,6 @@ asyncFactorialApi.computeFactorial(12, (error, result) => {
   }
 });
 
-// Event listener for successful computation
-asyncFactorialApi.computeFactorial(7, (error, result) => {
-  if (error) {
-    console.error('Error:', error.message);
-  } else {
-    console.log('Factorial of 7:', result);
-  }
-});
 
-// Note: The results and errors will be logged after a 3-second delay due to the setTimeout in the API
+
+//The results and errors will be logged after a 3-second delay due to the setTimeout in the API
