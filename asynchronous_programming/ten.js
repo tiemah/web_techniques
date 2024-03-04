@@ -1,9 +1,8 @@
 class AsyncFactorialAPI {
     constructor() {
       this.result = null;
-    }
+    }  
     
-  
     computeFactorial(number, callback) {
       // Check for negative numbers
       if (number < 0) {
