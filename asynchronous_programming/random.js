@@ -23,7 +23,7 @@ function getRandomDelay(min, max) {
     const minDelay = 1000; // Minimum delay time in milliseconds
     const maxDelay = 5000; // Maximum delay time in milliseconds
   
-    const delayTime = getRandomDelay(minDelay, maxDelay);
+    const delayTime = getRandomDelay(minDelay, maxDelay);//function call to the getRandomDelay function
   
     setTimeout(() => {
       console.log(`Code executed after ${delayTime} milliseconds.`);
